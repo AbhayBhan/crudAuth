@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import Homepage from './components/Homepage';
+import { auth, db } from './firebaseCfg';
+import {setDoc, doc} from 'firebase/firestore';
+import uniqid from 'uniqid';
 import './styles/main.css'
 
 function App() {

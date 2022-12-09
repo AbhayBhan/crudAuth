@@ -6,11 +6,10 @@ import '../styles/main.css';
 const loginPage = ({loginAccept, signupRedir}) => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
-    const [user, setUser] = useState([]);
+    const [Uid, setUid] = useState("");
 
     useEffect(() => {
         onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
             {currentUser ? loginAccept() : console.log("not logged")}
         })
     },[])
